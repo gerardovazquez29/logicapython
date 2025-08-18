@@ -2,7 +2,7 @@
 ### Challenges ###
 
 """
-EL FAMOSO "FIZZ BUZZâ€:
+EL FAMOSO "FIZZ BUZZ:
 Escribe un programa que muestre por consola (con un print) los
 numeros de 1 a 100 (ambos incluidos y con un salto de li­nea entre
 cada impresion), sustituyendo los siguientes:
@@ -13,15 +13,15 @@ cada impresion), sustituyendo los siguientes:
 
 
 def fizzbuzz():
-    for index in range(1, 101):
-        if index % 3 == 0 and index % 5 == 0:
+    for i in range(1, 101):
+        if i % 3 == 0 and i % 5 == 0:
             print("fizzbuzz")
-        elif index % 3 == 0:
+        elif i % 3 == 0:
             print("fizz")
-        elif index % 5 == 0:
+        elif i % 5 == 0:
             print("buzz")
         else:
-            print(index)
+            print(i)
 
 
 fizzbuzz()
@@ -57,16 +57,14 @@ de Fibonacci empezando en 0.
 
 def fibonacci():
 
-    prev = 0
-    next = 1
+    inicio = 0
+    siguente = 1
 
-    for index in range(0, 50):
-        print(prev)
-        fib = prev + next
-        prev = next
-        next = fib
-
-
+    for i in range(0, 50):
+        print(inicio)
+        fib = inicio + siguente
+        inicio = siguente
+        siguente = fib
 fibonacci()
 
 """
@@ -75,24 +73,16 @@ Escribe un programa que se encargue de comprobar si un numero es o no primo.
 Hecho esto, imprime los numeros primos entre 1 y 100.
 """
 
-
 def is_prime():
-
     for number in range(1, 101):
-
         if number >= 2:
-
             is_divisible = False
-
             for index in range(2, number):
                 if number % index == 0:
                     is_divisible = True
                     break
-
             if not is_divisible:
                 print(number)
-
-
 is_prime()
 
 """
