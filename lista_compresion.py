@@ -76,3 +76,34 @@ matriz = [[fila * 3 + columna + 1 for columna in range(3)] for fila in range(3)]
 print(matriz) # [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 print("-"*35)
+
+# 11. Genera una lista con los números del 1 al 50, pero solo los múltiplos de 3.
+multiplos_tres = [n for n in range(51) if n % 3 == 0]
+print(multiplos_tres) # [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48]
+
+# 12. Convierte cada letra de la palabra "Pythonista" en minúscula usando list comprehension.
+palabra = "Pythonista"
+palabra_minuscula = "".join([letra.lower() for letra in palabra])# join une todas las letras en una cadena
+print(palabra_minuscula) # pythonista
+
+palabra_minuscula = "".join([letra.lower() for letra in "Pythonista"])# agregando las comillas y el join une todo
+print(palabra_minuscula) # ['p', 'y', 't', 'h', 'o', 'n', 'i', 's', 't', 'a'] o pythonista
+
+# 13. Crea una lista con los cubos de los números impares del 1 al 20.
+impares = [i**3 for i in range(1,21) if i % 2 != 0]
+print(impares) # [1, 27, 125, 343, 729, 1331, 2197, 3375, 4913, 6859]
+
+# 14. Genera una lista con las palabras de una frase, pero solo aquellas que tengan más de 4 letras.
+frase = "Eres un buen estudiante seras el mejor"
+frase_mas_cuatro = [palabra for palabra in frase.split() if len(palabra) > 4 ] # split divide la frase en palabras
+print(frase_mas_cuatro) # ['estudiante', 'seras', 'mejor']
+
+# 15. Dada una lista de temperaturas en Celsius [0, 20, 30, 40], conviértelas a Fahrenheit.
+Celsius = [0, 20, 30, 40]
+Fahrenheit = [temp * 9/5 + 32 for temp  in Celsius]
+print(Fahrenheit) # [32.0, 68.0, 86.0, 104.0]
+
+# 16. Crea una matriz identidad de 3x3 usando list comprehension.
+matriz = [[1 if x == j else 0  for x in range(3)]  for j in range(3)] 
+print(matriz) # [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+
