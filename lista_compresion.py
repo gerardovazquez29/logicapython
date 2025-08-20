@@ -107,3 +107,42 @@ print(Fahrenheit) # [32.0, 68.0, 86.0, 104.0]
 matriz = [[1 if x == j else 0  for x in range(3)]  for j in range(3)] 
 print(matriz) # [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 
+# 17.Crear una matriz 3x3 usando listas por compresión
+matriz = [[s for s in range(3)] for m in range(3)]
+print(matriz) # [[0, 1, 2], [0, 1, 2], [0, 1, 2]]
+
+# 18. Crea una nueva lista que contenga solo las palabras que 
+# tengan más de 6 letras y conviértelas en mayúsculas.
+palabras = ["computadora", "python", "dato", "programación", "red", "algoritmo"]
+mas_de_seis = [n.upper() for n in palabras if  len(n) > 6 ]
+print(mas_de_seis) # ['COMPUTADORA', 'PROGRAMACIÓN', 'ALGORITMO']
+
+# 19. Usa comprensión de listas para obtener la matriz transpuesta (filas ↔ columnas).
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matriz_traspuesta = [[fila[i] for fila in matriz] for i in range(len(matriz[0]))]
+print(matriz_traspuesta) # [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+
+# 20. Crea una lista por comprensión que contenga los números únicos en orden ascendente.
+numeros = [3, 6, 2, 6, 7, 3, 8, 2, 1]
+unicos_ordenados = [n for n in sorted(set(numeros))]
+print(unicos_ordenados) # [1, 2, 3, 6, 7, 8]
+
+# 21. Dada la lista ["python", "es", "poderoso"], 
+# crea un diccionario donde la clave sea la palabra y el valor la palabra en mayúsculas.
+frase = ["python", "es", "poderoso"]
+
+# 22. Genera un diccionario con los números del 1 al 10 como claves y 
+# su paridad como valor ("par" o "impar").
+
+
+# 23. Dado un diccionario con nombres y edades:
+personas = {"Ana": 20, "Luis": 17, "María": 25, "Pedro": 15}
+# Crea un nuevo diccionario solo con las personas mayores de edad (>=18).
+
+
+# 24. Dada una cadena: "programacion", crea un diccionario con cada letra y cuántas veces aparece.
+
+
+# 25. Genera un diccionario que represente una tabla de multiplicar del 5, 
+# con el número como clave y el resultado como valor.
+
