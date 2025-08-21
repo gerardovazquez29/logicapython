@@ -133,16 +133,22 @@ frase = ["python", "es", "poderoso"]
 
 # 22. Genera un diccionario con los números del 1 al 10 como claves y 
 # su paridad como valor ("par" o "impar").
-
+pares_y_nones = {n: ("par" if n % 2 == 0 else "impar") for n in range(1, 11)}
+print(pares_y_nones) # {1: 'impar', 2: 'par', ..., 10: 'par'}
 
 # 23. Dado un diccionario con nombres y edades:
 personas = {"Ana": 20, "Luis": 17, "María": 25, "Pedro": 15}
 # Crea un nuevo diccionario solo con las personas mayores de edad (>=18).
-
+mayores = {nombre: edad for nombre, edad in personas.items() if edad >= 18}
+print(mayores) # {'Ana': 20, 'María': 25}
 
 # 24. Dada una cadena: "programacion", crea un diccionario con cada letra y cuántas veces aparece.
-
+cadena = "programacion"
+veses_aparese = {letra: cadena.count(letra) for letra in set(cadena)}
+print(veses_aparese) # {'c': 1, 'n': 1, 'a': 2, 'i': 1, 'r': 2, 'p': 1, 'o': 2, 'g': 1, 'm': 1}
 
 # 25. Genera un diccionario que represente una tabla de multiplicar del 5, 
 # con el número como clave y el resultado como valor.
+tabla_del_cinco = {n: n * 5 for n in range(1,6)}
+print(tabla_del_cinco) # {1: 5, 2: 10, 3: 15, 4: 20, 5: 25}
 
