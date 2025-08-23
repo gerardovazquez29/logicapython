@@ -1,0 +1,6 @@
+Mi nombre es Gerardo
+Mi segundo nombre es Santiago
+Mi apellido es Vazquez
+Mi edad es 44
+Mi lenguaje faborito es python
+
