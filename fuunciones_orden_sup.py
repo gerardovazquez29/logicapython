@@ -71,9 +71,26 @@ es_par = lambda x: x % 2 == 0
 print(contar_cumplen(numeros, es_par)) # 3
 
 # 9. Crea una funcion que reciba dos funciones y un numero, y las aplique en orden.
+def crear_funcion(f1, f2, n):
+    return f2(f1(n))
+def sumar_numero(x):
+    return x + 2
+def multiplicar_cinco(x):
+    return x * 5
+resultado = crear_funcion(sumar_numero, multiplicar_cinco, 5)
+print(resultado) # 35
 
 # 10. Crea una funcion que reciba una lista y una funcion, y 
 # aplique esa funcion a cada elemento usando un bucle (sin map).
+def aplicar_a_lista(lista, funcion):
+    nueva_lista = []
+    for elemento in lista:
+        nuevo_elemento = funcion(elemento)
+        nueva_lista.append(nuevo_elemento)
+    return nueva_lista
+numeros = [1,2,3,4]
+resultado = aplicar_a_lista(numeros, lambda x: x * 3)
+print(resultado) # [3, 6, 9, 12]
 
 # 11. Crea una función que devuelva una función que reciba un 
 # número y devuelva el doble de ese número.
@@ -89,4 +106,31 @@ print(doblador_funcion(7)) # 14
 def filttrar_lista(lista, funcion):
     return [elemento for elemento in lista if funcion(elemento)]
 
-print(filttrar_lista(numeros, es_par)) # [2, 4, 6]
+print(filttrar_lista(numeros, es_par)) # [2, 4]
+
+# 13. Crea una función que reciba tres funciones 
+# y un número, y las aplique en orden.
+def aplicar_tres_funciones(f1, f2,  f3, n):
+    return f3(f2(f1(n)))
+def suma_uno(x):
+    return x + 1
+def cuadrado(x):
+    return x * x
+def resta_tres(x):
+    return x - 3
+resultado = aplicar_tres_funciones(suma_uno,cuadrado,resta_tres,2)
+print(resultado) # 6
+
+# 14. Crea una función que reciba una lista y una función, y 
+# devuelva una nueva lista solo con los 
+# elementos para los que la función retorne True (sin usar filter).
+def filtrar_lista(lista, funcion):
+    nueva_lista = []
+    for elemento in lista:
+        if funcion(elemento):
+            nueva_lista.append(elemento)
+    return nueva_lista
+
+numeros = [1,2,3,4,5,6]
+resultado = filtrar_lista(numeros, lambda x : x % 2 == 0)
+print(resultado) # [2, 4, 6]
