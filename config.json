@@ -1,0 +1,13 @@
+{
+  "app": "demo",
+  "db": {
+    "host": "localhost",
+    "port": 5432
+  },
+  "debug": false,
+  "features": [
+    "auth",
+    "cache"
+  ],
+  "version": 1
+}
