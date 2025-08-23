@@ -1,6 +1,4 @@
 import csv
-from pathlib import Path
-
 
 encabesado = ["id", "name", "age", "email"]
 Datos = [
