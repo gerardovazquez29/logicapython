@@ -7,8 +7,11 @@ my_other_string = "Esta no es la leccion numero 6: Manejo de ficheros"
 match = re.match("Esta es la leccion", my_string,re.I)
 print(match)
 # <re.Match object; span=(0, 18), match='Esta es la leccion'>
-start, end = match.span()
-print(my_string[start:end]) # Esta es la leccion
+if match is not None:
+    start, end = match.span()
+    print(my_string[start:end]) # Esta es la leccion
+else:
+    print("No se encontró coincidencia")
 
 match = re.match("Esta no es la leccion", my_other_string)
 if match is not None:
@@ -23,8 +26,11 @@ if match is not None:
 search = re.search("leccion", my_string,re.I)
 print(search)
 # <re.Match object; span=(11, 18), match='leccion'>
-start, end = search.span()
-print(my_string[start:end]) # leccion
+if search is not None:
+    start, end = search.span()
+    print(my_string[start:end]) # leccion
+else:
+    print("No se encontró coincidencia")
 
 # findall
 findall = re.findall("leccion", my_string,re.I)
@@ -124,9 +130,12 @@ texto = "Mi fecha de nacimiento es 29/03/1981"
 patron = r"(\d{2})/(\d{2})/(\d{4})"
 
 resultado = re.search(patron, texto)
-print("Día:", resultado.group(1)) # Día: 29
-print("Mes:", resultado.group(2)) # Mes: 03
-print("Año:", resultado.group(3)) # Año: 1981
+if resultado:
+    print("Día:", resultado.group(1)) # Día: 29
+    print("Mes:", resultado.group(2)) # Mes: 03
+    print("Año:", resultado.group(3)) # Año: 1981
+else:
+    print("No se encontró una fecha válida en el texto.")
 
 
 correo = "gerardo123@example.com"
