@@ -1,10 +1,10 @@
 
 # Esta función imprime un saludo
-def saludar():
+def saludar_mundo():
     print("¡Hola, mundo!")  # Muestra el mensaje en pantalla
 
 # Llamamos a la función para que se ejecute
-saludar()
+saludar_mundo()
 
 # Esta función recibe un nombre y saluda a esa persona
 def saludar_persona(nombre):
@@ -37,11 +37,11 @@ x, y = operaciones(10, 5)  # Desempaquetamos los resultados
 print("Suma:", x)
 print("Resta:", y)
 
-def cuadrado(x):
+def cuadrado_simple(x):
     return x * x
 
 def suma_de_cuadrados(a, b):
-    return cuadrado(a) + cuadrado(b)
+    return cuadrado_simple(a) + cuadrado_simple(b)
 
 resultado = suma_de_cuadrados(2, 3)
 print("Suma de cuadrados:", resultado)
@@ -79,54 +79,54 @@ def mostrar_info(**kwargs):
 mostrar_info(nombre="Gerardo", edad=30)
 
 # Crea una función que reciba tu edad y diga si eres mayor de edad.
-def saludo():
+def saludo_edad():
     edad = int(input("Dime cuantos años tienes: "))
     if edad >= 18:
         print(f"Tu Edad es: {edad} Eres mayor de edad")
     else:
         print(f"Tu Edad es: {edad} Eres menor de edad")
     return edad
-saludo()
+saludo_edad()
 
 print("-" * 20)
 
 # Escribe una función que reciba una cadena y devuelva cuántas letras tiene.
-def contar_cadena():
+def contar_cadena_input():
     texto = input("Escribe una cadena de texto: ")
     cantidad = len(texto.replace(" ", ""))
     print(f"La cadena de texto: {texto} tiene: {cantidad} letras")
     return cantidad
-contar_cadena() 
+contar_cadena_input() 
 
 
 print("-" * 20)
 
 # Escribe una función que multiplique dos números.
-def multiplicar_num(a, b):
+def multiplicar_dos_numeros(a, b):
     numeros = a * b
     return numeros
-print(multiplicar_num(6,7))
+print(multiplicar_dos_numeros(6,7))
 
 print("-" * 20)
 
 # Crea una función que reciba un número y devuelva si es par o impar.
 print("Hola Te gustaria saber si un numero es par o impar")
-def par_o_impar():
+def par_o_impar_v2():
     numero = int(input("Ingresa un numero: "))
     if numero % 2 == 0:
         print(f"El numero; {numero} es par")
     else:
         print(f"El numero: {numero} es impar")
     return numero
-par_o_impar()
+par_o_impar_v2()
 
 print("-" * 20)
 
 # Escribe una función que reciba tu nombre y devuelva "Hola, [nombre]".
-def nombre_saludo():
+def nombre_saludo_input():
     nombre = input("Ingresa tu Nombre: ")
     print(f"Hola {nombre}")
-nombre_saludo()
+nombre_saludo_input()
 
 # Crea una función que reciba una lista de números y devuelva la suma total.
 
