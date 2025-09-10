@@ -43,7 +43,7 @@ elif option == "3":
 elif option == "4":
     product = input("Ingresa el Producto que Buscas: ").capitalize()
     if product in shopping_cart:
-        print(product)
+        print(f"El Producto: {product} esta en la lista")
     else:
         print("Producto no encontrado")
 
@@ -57,6 +57,7 @@ elif option == "6":
         product = shopping_cart.clear()
         print(f"el carrito ha sido Eliminado correctamente: {product} ")
     elif product == "no":
-        print(f"El carrito no se Elimino: {shopping_cart}")    
+        print(f"El carrito no se Elimino: {shopping_cart}")   
+         
 else:
     print("opcion no valida")
