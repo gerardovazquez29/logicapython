@@ -17,31 +17,46 @@ print("6. Vaciar el carrito")
 
 shopping_cart = ['Laptop', 'Vaso', 'Cafe', 'Audifonos']
 option = input("Elige una opcion (1-6): ")
-shopping_cart1 = shopping_cart[:]
 
 if option == "1":
-    product_add = input("agrega un nuevo producto: ").capitalize()
-    if product_add  not in shopping_cart:
-        shopping_cart.append(product_add)
+    product = input("agrega un nuevo producto: ").capitalize()
+    if product not in shopping_cart:
+        shopping_cart.append(product)
         print("Producto añadido correctamente")
     else:
         print("producto ya existe en el inventario")
 
 elif option == "2":
-    product_remove = input("Ingresa el producto que quieras eliminar: ").capitalize()
-    if product_remove in shopping_cart1:
-        shopping_cart1.remove(product_remove)
-        print(f"El producto: {product_remove} ha sido eliminado correctamente" )
-        print(shopping_cart1)
+    product = input("Ingresa el producto que quieras eliminar: ").capitalize()
+    if product in shopping_cart:
+        shopping_cart.remove(product)
+        print(f"El producto: {product} ha sido eliminado correctamente" )
+        print(shopping_cart)
     else:
         print("producto no encontrado")
+
 elif option == "3":
-    pass
+    print("Lista de Productos Ordenados: ")
+    product = sorted(shopping_cart)
+    print(product)
+
 elif option == "4":
-    pass
+    product = input("Ingresa el Producto que Buscas: ").capitalize()
+    if product in shopping_cart:
+        print(product)
+    else:
+        print("Producto no encontrado")
+
 elif option == "5":
-    pass
+    product = len(shopping_cart)
+    print(f"El total de Productos es de: {product} ")
+
 elif option == "6":
-    pass
+    product = input("Deseas eliminar el carrito: 'si', 'no':  ")
+    if product == "si":
+        product = shopping_cart.clear()
+        print(f"el carrito ha sido Eliminado correctamente: {product} ")
+    elif product == "no":
+        print(f"El carrito no se Elimino: {shopping_cart}")    
 else:
     print("opcion no valida")
