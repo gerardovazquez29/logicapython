@@ -63,7 +63,7 @@ persona = {"nombre": "Ana", "edad": 30}
 
 # Con dict()
 persona2 = dict(nombre="Luis", edad=22)
-persona2.update({'ciudad':'Guadalajara'}) # modififa un  diccionario
+persona2.update({'ciudad':'Guadalajara'}) # modifica un  diccionario
 print(persona2) # {'nombre': 'Luis', 'edad': 22, 'ciudad': 'Guadalajara'}
 
 mi_dic = {"nombre": "Santiago", "edad": 25, "lenguaje": "Python"}
