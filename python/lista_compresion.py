@@ -1,5 +1,23 @@
 ### List Comprehension ###
 
+frutas = ['manzana','platano', 'naranja']
+print(frutas[0]) # manzana
+
+numeros = [1, 2, 3]
+print(len(numeros))  # 3
+print(numeros * 2)   # [1, 2, 3, 1, 2, 3]
+
+frutas = ["manzana", "plátano", "naranja"]
+frutas.append("uva")       # agrega al final
+frutas.insert(1, "pera")   # inserta en posición
+frutas.remove("plátano")   # elimina por valor
+frutas.pop()               # elimina último
+frutas.sort()              # ordena
+frutas.reverse()           # invierte
+print(frutas)
+
+
+
 my_original_list = [0, 1, 2, 3, 4, 5, 6, 7]
 print(my_original_list) # [0, 1, 2, 3, 4, 5, 6, 7]
 
@@ -152,3 +170,10 @@ print(veses_aparese) # {'c': 1, 'n': 1, 'a': 2, 'i': 1, 'r': 2, 'p': 1, 'o': 2, 
 tabla_del_cinco = {n: n * 5 for n in range(1,6)}
 print(tabla_del_cinco) # {1: 5, 2: 10, 3: 15, 4: 20, 5: 25}
 
+matriz = [[1, 2], [3, 4], [5, 6]]
+print(matriz[1][0])  # 3
+
+numeros = [3, 7, 2, 9, 5]
+print(min(numeros))  # 2
+print(max(numeros))  # 9
+print(sum(numeros))  # 26
