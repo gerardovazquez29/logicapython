@@ -56,20 +56,49 @@ print(cubos)
 
 # 7 - Crea un inventario con al menos 3 productos.
       #Resta 1 a la cantidad de un producto al “venderlo”.
-
-
+productos = {
+    'rollo':39,
+    'servilletas':25,
+    'tortillas':13
+    }
+productos['tortillas'] -= 1
+print(productos) # {'rollo': 39, 'servilletas': 25, 'tortillas': 12}
 
 # 8 - Crea un diccionario anidado que guarde datos de 2 estudiantes (nombre, edad, calificación).
         #Muestra la calificación del segundo estudiante.
-
+estudiantes = {
+    'est1': {'nombre':'Gerardo',
+            'edad':25,
+            'calificacion': 8.9
+            },
+    'est2': {
+        'nombre':'Santiago',
+        'edad':22,
+        'calificacion':8.5
+    }
+}
+print(estudiantes['est2']['calificacion']) # 8.5
 
 
 # 9 - Escribe una función que reciba un diccionario y muestre todas sus claves y valores.
-
-
+def mostrar(dic):
+    for clave,valor in dic.items():
+        print(f"{clave}:{valor}")
+mostrar({"nombre":"Santiago","edad":44})
+"""
+nombre:Santiago
+edad:44
+"""
 
 # 10 - Simula un carrito de compras con un diccionario.
         # Agrega productos con sus precios.
         # Calcula el total de la compra.
-
+carrito = {
+    'desodorante':48,
+    'perfume':350,
+    'playera':120,
+    'pantalon':500
+}
+total = sum(carrito.values())
+print(f"Total a pagar es: ${total}") # Total a pagar es: $1018
 
