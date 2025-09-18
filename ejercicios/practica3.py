@@ -1,9 +1,12 @@
 #   10 Ejercicios de Práctica
 # Ejercicios de Tuplas (1–5)
 # 1-Crea una tupla con 6 números. Imprime el primero y el último.
-
+numeros = (1,2,3,4,5,6)
+print(numeros[0]) # 1
+print(numeros[-1]) # 6
 
 # 2-Desempaqueta una tupla de 3 valores en variables e imprímelas.
+tupla = ('toño','jose','luis')
 
 
 # 3-Usa .count() para contar cuántas veces aparece un número en una tupla.
