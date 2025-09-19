@@ -84,21 +84,81 @@ for numero in numeros:
     el cuadrado de 6 es:12
     """
 # crea un bucle que pida al usuario 5 palabras y las guarde en una lista.
+lista_palabras = []
 
+print("Bienvenido Escribe 5 palabras que te gusten que aparescan ")
+for _ in range(5):
+    palabra = input(f"Ingresa la palabra que te guste {_+1}: ")
+    lista_palabras.append(palabra)
+    print(f"Las Palabras Ingresadas son: {lista_palabras}")
+print("Muchas Gracias")
+""" Las Palabras Ingresadas son: ['python', 'Dyango', 'Pandas']
+Ingresa la palabra que te guste 4: postgress
+Las Palabras Ingresadas son: ['python', 'Dyango', 'Pandas', 'postgress']
+Ingresa la palabra que te guste 5: flask
+Las Palabras Ingresadas son: ['python', 'Dyango', 'Pandas', 'postgress', 'flask']
+Muchas Gracias """
+
+# while
+lista_palabras = []
+contador = 0
+
+while contador < 5:
+    palabra = input(f"Ingresa la palabra que te guste {contador+1}: ")
+    lista_palabras.append(palabra)
+    contador += 1
+print(f"Las Palabras Ingresadas son: {lista_palabras}")
+""" Ingresa la palabra que te guste 1: papa
+Ingresa la palabra que te guste 2: pepe
+Ingresa la palabra que te guste 3: pepa
+Ingresa la palabra que te guste 4: pipa
+Ingresa la palabra que te guste 5: popo
+Las Palabras Ingresadas son: ['papa', 'pepe', 'pepa', 'pipa', 'popo'] """
 
 
 # haz un programa que calcule la suma de los primeros 100 números enteros con un bucle.
-
-
-
-# Crea un for que sume los números del 1 al 50.
-
+total = 0
+for numeros in range(101):
+    total += numeros
+print(f"la suma total de los numeros es: {total} ")
+ # la suma total de los numeros es: 5050
 
 
 # Recorre la palabra "autodidacta" e imprime solo las vocales.
+vocales = 'aeiou'
+palabra = "autodidacta"
+vocales_encontrar = []
+print(f"La palabra a analizar es: {palabra}")
+for letra in palabra:
+    if letra in vocales:
+        vocales_encontrar.append(letra)
+        print(f"Las vocales de la palabra 'autodidacta' son: {vocales_encontrar}") 
 
+""" Las vocales de la palabra 'autodidacta' son: ['a']
+Las vocales de la palabra 'autodidacta' son: ['a', 'u']
+Las vocales de la palabra 'autodidacta' son: ['a', 'u', 'o']
+Las vocales de la palabra 'autodidacta' son: ['a', 'u', 'o', 'i']
+Las vocales de la palabra 'autodidacta' son: ['a', 'u', 'o', 'i', 'a']
+Las vocales de la palabra 'autodidacta' son: ['a', 'u', 'o', 'i', 'a', 'a'] """
 
 
 # intenta resolver un reto sencillo de lógica: imprime los números del 1 al 50, 
 # pero sustituye múltiplos de 3 por “Fizz” y de 5 por “Buzz”.
-
+for _ in range(1,51):
+    if _ % 3 == 0:
+        print("Fizz")
+    elif _ % 5 == 0:
+        print("Buzz")
+    else:
+        print(_)
+"""  1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+"""
