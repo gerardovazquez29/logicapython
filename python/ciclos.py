@@ -1,3 +1,5 @@
+
+
 # Es una estructura que se puede reoetir varias veces
 for item in "python":
     print(item)
