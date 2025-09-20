@@ -57,6 +57,19 @@ name Gerardo
 age 44
 can_swin False
 """
+
+persona = {"nombre": "Ana", "edad": 25}
+for clave, valor in persona.items():
+    print(clave, ":", valor)
+""" nombre : Ana
+edad : 25 """
+
+# Bucles anidados
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(i, j)
+
+
 # Iterando con range
 for number in range(0,10):
     print(number) # 0 => 9
@@ -80,6 +93,15 @@ for index, char in enumerate('Devtalles'):
 """
 for index, number in enumerate(list(range(100))):
     print(index, number) # del 0 al 99 
+
+colores = ["rojo", "verde", "azul"]
+for indice, color in enumerate(colores):
+    print(indice, color)
+""" 
+0 rojo
+1 verde
+2 azul  """
+
 
 # While
 
